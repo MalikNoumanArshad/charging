@@ -53,9 +53,7 @@ export default function Map() {
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={
-                        isHighlighted ? "#161e44" : "#161e44"
-                      }
+                      fill={isHighlighted ? "#161e44" : "#161e44"}
                       stroke="white"
                       strokeWidth={1}
                       style={{
@@ -63,9 +61,7 @@ export default function Map() {
                           outline: "#0000",
                         },
                         hover: {
-                          fill: isHighlighted
-                            ? "grey"
-                            : "#161e44",
+                          fill: isHighlighted ? "grey" : "#161e44",
                           outline: "none",
                         },
                         pressed: { fill: "#02A" },
@@ -78,8 +74,9 @@ export default function Map() {
           </Geographies>
 
           {appData.pointsData &&
-            appData.pointsData.map(({ state, coordinates }, index) => {
-              console.log("state name", state, coordinates);
+            appData.pointsData.map(({ state, coordinates, title }, index) => {
+              const isIssueMarker = title.includes("ISSUE BRIEF"); // Check if it's an issue marker
+
               return (
                 <Marker
                   key={index} // Use index as the key for each Marker
@@ -87,7 +84,6 @@ export default function Map() {
                   onMouseEnter={() => {
                     console.log(state);
                     if (!isMobile) {
-                      console.log(state);
                       setHoveredState(state);
                     }
                   }}
@@ -96,17 +92,48 @@ export default function Map() {
                     style={{ position: "absolute" }}
                     transform="translate(-12, -22) scale(1.2)"
                   >
-                    <circle cx="12" cy="10" r="2" fill="white" />
-                    <path
-                      d="M12 24.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 14.7z"
-                      fill="#fcbc0c"
-                      stroke="white"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle cx="12" cy="10" r="4" fill="#fcbc0c" />
-                    <circle cx="12" cy="10" r="2" fill="white" />
+                    {isIssueMarker ? (
+                      // Different style for issue markers
+                      <>
+                        <g style={{ position: "absolute" }}>
+                          <rect
+                            x="4"
+                            y="4"
+                            width="16"
+                            height="16"
+                            fill="#fcbc0c"
+                            stroke="white"
+                            strokeWidth="1"
+                            rx="2"
+                            ry="2"
+                          />
+                          <path
+                            d="M10 20 L12 24 L14 20 Z"
+                            fill="#fcbc0c"
+                            stroke="white"
+                            strokeWidth="1"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <circle cx="12" cy="12" r="4" fill="white" />
+                        </g>
+                      </>
+                    ) : (
+                      // Default marker style
+                      <>
+                        <circle cx="12" cy="10" r="2" fill="white" />
+                        <path
+                          d="M12 24.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 14.7z"
+                          fill="#fcbc0c"
+                          stroke="white"
+                          strokeWidth="1"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle cx="12" cy="10" r="4" fill="#fcbc0c" />
+                        <circle cx="12" cy="10" r="2" fill="white" />
+                      </>
+                    )}
                   </g>
                 </Marker>
               );

@@ -40,7 +40,7 @@ export default function CityInfoCard(props) {
             className="card-img-top"
             src={stateData.image}
             alt="carddetail"
-            height="150px"
+            height="200px"
           />
         ) : stateData.vimeoVideo !== "" ? (
           <iframe

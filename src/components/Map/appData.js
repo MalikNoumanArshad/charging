@@ -63,7 +63,7 @@ const appData = {
       description: `Clean Trucks`,
       youtubeVideo: "",
       link:"https://www.chargingusforward.com/texas-issue-brief",
-      image: "https://images.squarespace-cdn.com/content/v1/602e01c0d559ed484f74b59e/bbe67340-685d-4138-bdac-625067698821/Issue+Brief+-+Clean+Trucks+Hit+the+Road+in+Texas+%281%29.jpg?format=500w",
+      image: "https://images.squarespace-cdn.com/content/v1/602e01c0d559ed484f74b59e/bbe67340-685d-4138-bdac-625067698821/Issue+Brief+-+Clean+Trucks+Hit+the+Road+in+Texas+%281%29.jpg?format=300w",
     },
     {
       id: 6,
@@ -74,7 +74,7 @@ const appData = {
       coordinates: [-82.9001, 32.1656],
       description: `EV Manufacturing`,
       youtubeVideo: "",
-      image: "Thumbnail of report cover",
+      image: "https://images.squarespace-cdn.com/content/v1/602e01c0d559ed484f74b59e/bbe67340-685d-4138-bdac-625067698821/Issue+Brief+-+Clean+Trucks+Hit+the+Road+in+Texas+%281%29.jpg?format=300w",
       link:"https://www.chargingusforward.com/georgia-issue-brief"
     },
     {
@@ -86,7 +86,8 @@ const appData = {
       coordinates: [-82.9071, 40.4173],
       description: `Clean Ports`,
       youtubeVideo: "",
-      image: "Thumbnail of report cover",
+      image: "https://images.squarespace-cdn.com/content/v1/602e01c0d559ed484f74b59e/bbe67340-685d-4138-bdac-625067698821/Issue+Brief+-+Clean+Trucks+Hit+the+Road+in+Texas+%281%29.jpg?format=300w",
+      link:"https://www.chargingusforward.com/ohio-issue-brief"
     },
     {
       id: 8,
@@ -97,7 +98,7 @@ const appData = {
       coordinates: [-111.0937, 34.0489],
       description: `Charging Infrastructure`,
       youtubeVideo: "",
-      image: "#",
+      image: "https://images.squarespace-cdn.com/content/v1/602e01c0d559ed484f74b59e/06a69497-2389-4c11-92b2-cdc5f494c0d5/Screenshot+2024-10-24+at+7.28.07+AM.png?format=300w",
       link:"https://www.chargingusforward.com/arizona-issue-brief"
     },
   ],
