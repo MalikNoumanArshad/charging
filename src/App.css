@@ -1,0 +1,95 @@
+.App {
+  display: grid; 
+
+  /* text-align: center; */
+  /* row-gap: 1px;
+  column-gap: 1px; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+/* .bg{
+  background-image: url(./images/1.png);
+  background-color: aqua;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;  
+  width: 100%; 
+  position: relative;
+} */
+/* .bg1 {
+  background-image: url('./images/route-logoroute-logo.png');
+  width: 32%;
+  height: 88vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 13%;
+  right: 55%; 
+} */
+/* .text1 {
+  position: absolute; 
+  margin: 0;
+  top: 50%;
+  right: 0;
+  font-family: 'Poppins', sans-serif;
+  transform: translate( -300px, -270px) ;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #689DAA;
+  line-height: 1em;
+}
+
+.text2 {
+  position: absolute; 
+  margin: 0;
+  top: 90%;
+  right: 0;
+  font-family: 'Poppins', sans-serif;
+  transform: translate( -300px, -270px) ;
+  font-size: 2.2rem; 
+  color: #BBBBBB;
+  text-align: right;
+  line-height: 1.5em;
+  width: 33.33%;
+} */
+
+/* .text2 {
+  position: absolute; 
+  margin: 0;
+  top: 90%;
+  right: 0;
+  font-family: 'Poppins', sans-serif;
+  transform: translate( -300px, -270px) ;
+  font-size: 2.2rem; 
+  color: #BBBBBB;
+  text-align: right;
+  line-height: 1 em;
+  width: 33.33%;
+} */
+
+
+@media (max-width: 768px) {
+  .bg1 {
+    color: black;
+    width: 40%; 
+    height: 100vh;/* Adjust the width for smaller screens */
+    right:  52%; 
+    top: 14%; /* A/* Adjust the position from the right */
+  }
+}
+
+@media (max-width: 480px) {
+  .bg1 {
+    width: 80%; /* Adjust the width for even smaller screens */
+    right: 2%; /* Adjust the position from the right */
+    top: 10px; /* Adjust the position from the top */
+  }
+
+}
+
+.map-container {
+  margin-top: 80px; /* Adjust the value to increase/decrease the space */
+}
+ 
